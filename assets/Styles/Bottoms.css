@@ -1,0 +1,347 @@
+/*Boton de contacto*/
+.btn-contact {
+  position: fixed; /* Fija el botón en la pantalla */
+  bottom: 20px; /* Espacio desde el borde inferior de la pantalla */
+  right: 20px; /* Espacio desde el borde derecho de la pantalla */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  color: #fdfdfd; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma circular */
+  width: 60px; /* Ancho del botón */
+  height: 60px; /* Altura del botón */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer; /* Cursor de mano para indicar que es interactivo */
+  z-index: 999; /* Se coloca en la capa superior */
+  background-image: url('http://localhost/Vscode.proyec/img/vivo.png'); /* Imagen de fondo */
+  background-size: 60%; /* Tamaño de la imagen de fondo */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* No repite la imagen de fondo */
+  display: flex; /* Usado para centrar el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  transition: background-color 0.3s ease; /* Transición para cambios de color */
+}
+
+.dropdown {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.dropdown-content {
+  font-family: Times;
+  /* Tipo de letra */
+  font-size: 16px;
+  /* Tamaño de fuente */
+  font-weight: 300;
+  /* Tipo de letra delgado y fino */
+  display: none;
+  position: absolute;
+  bottom: 65px;
+  right: 30px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 999;
+}
+
+.dropdown-content .contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dropdown-content .whatsapp-icon {
+  width: 30px;
+  /* Tamaño de la imagen de WhatsApp */
+  margin-right: 20px;
+  /* Espacio entre la imagen y el texto */
+  border-radius: 50%;
+  /* Redondea las esquinas de la imagen */
+}
+
+.dropdown-content .whatsapp-text {
+  font-weight: bold;
+}
+
+
+
+
+/* Estilos CSS para los botones de redes sociales */
+.wrapper {
+  /* Configuración del contenedor */
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  /* Configuración de los íconos */
+  position: relative;
+  background: #fff;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon img {
+  /* Estilo para las imágenes dentro de los íconos */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20%;
+  /* Se aplica un borde redondeado a las imágenes */
+}
+
+.wrapper .tooltip {
+  /* Configuración del mensaje emergente */
+  position: absolute;
+  top: 70%;
+  /* Posición vertical centrada */
+  left: 50%;
+  /* Posición horizontal centrada */
+  transform: translate(-50%);
+  /* Centrar completamente el tooltip */
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  /* Estilo para mostrar el mensaje emergente al pasar el cursor sobre el icono */
+  top: -45px;
+  opacity: 1;
+}
+
+.wrapper .icon:hover img,
+.wrapper .icon:hover .tooltip {
+  /* Estilo para aplicar una sombra al icono y al mensaje emergente */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Estilos para los botones de redes sociales al pasar el cursor */
+.wrapper .facebook:hover .tooltip {
+  background: #1877f2;
+  /* Color de fondo al pasar el cursor sobre el botón de Facebook */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de Facebook */
+}
+
+.wrapper .twitter:hover .tooltip {
+  background: #1da1f2;
+  /* Color de fondo al pasar el cursor sobre el botón de Twitter */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de Twitter */
+}
+
+.wrapper .instagram:hover .tooltip {
+  background: #e4405f;
+  /* Color de fondo al pasar el cursor sobre el botón de Instagram */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de Instagram */
+}
+
+.wrapper .tiktok:hover .tooltip {
+  background: #69c9d0;
+  /* Color de fondo al pasar el cursor sobre el botón de TikTok */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de TikTok */
+}
+
+/* Estilos CSS para los botones de redes sociales */
+.wrapper {
+  /* Configuración del contenedor */
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  /* Configuración de los íconos */
+  position: relative;
+  background: #fff;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon img {
+  /* Estilo para las imágenes dentro de los íconos */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20%;
+  /* Se aplica un borde redondeado a las imágenes */
+}
+
+.wrapper .tooltip {
+  /* Configuración del mensaje emergente */
+  position: absolute;
+  top: 70%;
+  /* Posición vertical centrada */
+  left: 50%;
+  /* Posición horizontal centrada */
+  transform: translate(-50%);
+  /* Centrar completamente el tooltip */
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  /* Estilo para mostrar el mensaje emergente al pasar el cursor sobre el icono */
+  top: -45px;
+  opacity: 1;
+}
+
+.wrapper .icon:hover img,
+.wrapper .icon:hover .tooltip {
+  /* Estilo para aplicar una sombra al icono y al mensaje emergente */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Estilos para los botones de redes sociales al pasar el cursor */
+.wrapper .facebook:hover .tooltip {
+  background: #1877f2;
+  /* Color de fondo al pasar el cursor sobre el botón de Facebook */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de Facebook */
+}
+
+.wrapper .twitter:hover .tooltip {
+  background: #1da1f2;
+  /* Color de fondo al pasar el cursor sobre el botón de Twitter */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de Twitter */
+}
+
+.wrapper .instagram:hover .tooltip {
+  background: #e4405f;
+  /* Color de fondo al pasar el cursor sobre el botón de Instagram */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de Instagram */
+}
+
+.wrapper .tiktok:hover .tooltip {
+  background: #69c9d0;
+  /* Color de fondo al pasar el cursor sobre el botón de TikTok */
+  border-radius: 50%;
+  /* Se aplica un borde redondeado al botón de TikTok */
+}
+
+
+
+
+
+
+/*Botón para subir */
+.btn-scroll-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  /* Ancho del botón */
+  height: 50px;
+  /* Altura del botón */
+  background-image: url(https://i.pinimg.com/564x/dc/84/28/dc8428025574d243155ffb011aa2a5e9.jpg);
+  /* URL de tu imagen */
+  background-size: cover;
+  /* La imagen se adapta al tamaño del botón */
+  background-position: center;
+  /* La imagen se centra en el botón */
+  border: none;
+  border-radius: 50%;
+  /* Asegura que sea circular */
+  font-size: 0;
+  /* Oculta el texto del botón */
+  cursor: pointer;
+  z-index: 999;
+}
+
+/*boton registro*/
+.button-frap-green-sb {
+  background: #006241;
+  /* Utiliza el valor hexadecimal directamente */
+  border-radius: 500px;
+  box-shadow: 0 0 6px rgb(0 0 0 / 24%), 0 8px 12px rgb(0 0 0 / 14%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 16px 28px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  transition-property: transform, box-shadow, width, height;
+  transition-timing-function: ease;
+  z-index: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 56px;
+  min-width: max-content;
+  width: max-content;
+  display: inline-flex;
+  user-select: none;
+}
+
+/*Boton de Registro de formulario*/
+
+button[type="submit"] {
+  width: 180px;
+  /* Ajustar el ancho */
+  background-color: #9E9E9E;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  /* Ajustar el espacio interno */
+  border-radius: 20px;
+  /* Hacer el botón más redondeado */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Teachers", sans-serif;
+  /* Utilizar la fuente especificada */
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-size: 16px;
+  /* Ajustar el tamaño de fuente */
+  display: block;
+  /* Para que el botón se centre correctamente */
+  margin: 0 auto;
+  /* Centrar horizontalmente */
+}
+
+button[type="submit"]:hover {
+  background-color: #9E9E9E;
+}
+
