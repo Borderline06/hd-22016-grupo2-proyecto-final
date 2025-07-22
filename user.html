@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido| Starbucks Dashboard</title>
+  <link rel="stylesheet" href="./css/user.css">
+  <!-- Fuente de Google Fonts para un aire Starbucks -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <img src="img/favicon.jpg" alt="Starbucks logo" class="logo">
+      <h1 id="saludo"></h1>
+      <p class="mensaje-inspirador">¡El café perfecto para comenzar tu día!</p>
+    </header>
+    <section class="acciones-rapidas">
+  <div class="action-card" onclick="window.location.href='perfil.html'">
+    <img src="img/perfil.png" alt="Perfil" class="action-icon">
+    <span>Mi Perfil</span>
+  </div>
+  <div class="action-card" onclick="window.location.href='carrito.html'">
+    <img src="img/CAR.png" alt="Carrito" class="action-icon">
+    <span>Mi Carrito</span>
+  </div>
+  <div class="action-card logout" onclick="window.location.href='login.html'">
+    <img src="img/cerrar.png" alt="Cerrar sesión" class="action-icon">
+    <span>Cerrar sesión</span>
+  </div>
+</section>
+    
+    
+    <section class="beneficios" id="beneficios"></section>
+    <section class="ofertas-del-dia" id="ofertas"></section>
+    <section class="novedades" id="novedades"></section>
+    <section class="comunidad" id="comunidad"></section>
+    
+    
+  </div>
+  <script src="./js/user.js"></script>
+</body>
+</html>

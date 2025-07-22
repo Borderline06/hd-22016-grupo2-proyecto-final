@@ -1,0 +1,24 @@
+/* Para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+    }
+
+    .menu-horizontal li a {
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .menu-icono {
+        display: flex;
+    }
+}

@@ -1,0 +1,943 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@media (min-width: 320px) {
+    body {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1.4rem;
+    }
+}
+
+html, body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "calt";
+    background-color: #fff;
+    color: rgba(0, 0, 0, .87);
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    height: 100%;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;   
+}
+
+header {
+    width: 100%;
+}
+/* Estilos generales */
+.navbar-brand{
+    padding-left: 50px;
+}
+
+.navbar-nav{
+    margin: 0 auto;
+    display: flex;
+    gap: 14px;
+}
+
+
+.logo {
+    margin-right: 50px;
+}
+
+
+
+/* Estilos para la imagen de fondo */
+#fondo {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Estilos para la sección con texto encima de la imagen */
+.seccion-imagen {
+    position: relative;
+
+}
+
+.texto-encima {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+.texto-encima p {
+    color: #1d4d23;
+    font-family: 'Playfair Display', serif; /* Tipo de letra */
+    font-size: 65px; /* Tamaño de letra */
+}
+
+
+.texto-encima h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 128, 79);
+    font-size: 20px;
+}
+
+.texto-encima h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(19, 68, 49);
+    font-size: 20px;
+}
+@media only screen and (max-width: 420px) {
+    .texto-encima p {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .texto-encima h1 {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .texto-encima h3 {
+        font-size: 10px;
+    }
+}
+
+.subtitulo {
+    margin-top: 10px; /* Puedes ajustar este valor según sea necesario */
+}
+
+/* Estilos para la segunda sección de contenido adicional */
+.contenido-adicional2 h2 {
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: green; /* Cambia el color del texto a verde */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-bottom: 0px; /* Añade espacio inferior */
+}
+
+.contenido-adicional2 p {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black; /* Color del texto por defecto */
+    text-align: justify; /* Justifica el texto */
+    margin-bottom: 20px; /* Añade espacio inferior */
+}
+/* Estilos para el texto verde abajo */
+/* Estilos básicos del footer */
+.footer-text {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+}
+
+footer td ul li a[href="https://www.starbucksathome.com/pe/story/acerca-de-nosotros"],
+    footer td ul li a[href="https://www.starbucksathome.com/pe/story/sustentabilidad-del-cafe"],
+    footer td ul li a[href="http://localhost/Vscode.proyec/indexMENU.php"],
+    footer td ul li a[href="https://www.starbucks.pe/pages/orders-by-the-app"],
+    footer td ul li a[href="https://www.starbucks.pe/pages/culture-and-values"],
+    footer td ul li [href="https://www.starbucks.pe/pages/line-and-ethics"], 
+    footer td ul li a[href="https://www.starbucksathome.com/pe/terminos-y-condiciones"],
+    footer td ul li a[href="https://www.starbucksathome.com/pe/terminos-y-condiciones"],
+    footer td ul li a[href="http://localhost/Vscode.proyec/MERCH.php"] {
+    color: #808080; /* Color gris claro */
+    text-decoration: none; /* Quita el subrayado del enlace */
+}
+
+/* Estilos para el texto de "ESTILO DE VIDA" y "Café con amigos" */
+.contenido-adicional2 h2,
+.contenido-adicional2 h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Estilos para el footer*/
+
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--black-style);
+    color: var(--white-style);
+    font-family: 'Baloo', Helvetica, sans-serif;
+    padding: 40px 50px 40px 60px;
+    border-top: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+
+.footersubmenu {
+    display: inline-flex;
+    max-width: 190px;
+}
+
+.separate {
+    padding-top: 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+@media only screen and (max-width: 576px) {
+    .footersubmenu {
+        width: 95%;
+        max-width: inherit;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+}
+
+
+.footersubmenuopciones{
+    position: relative;
+    width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+    .footersubmenuopciones .Expansion {
+        max-height: 0;
+        transition: all 0.35s;
+        overflow: hidden;
+    }
+}
+
+.footersubmenuopciones label {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.MenuDesple-footer {
+    position: absolute;
+    width: 105%;
+    height: 25px;
+    z-index: 3;
+    cursor: pointer;
+    right: -5%;
+    opacity: 0;
+}
+
+/* *, :after, :before {
+    box-sizing: inherit;
+} */
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input {
+    line-height: normal;
+}
+
+@media only screen and (max-width: 576px) {
+    .MenuDesple-footer:checked ~ .Expansion {
+        max-height: 100vh;
+    }
+}
+
+input[type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+label {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 576px) {
+    .footersubmenuopciones label {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .footersubmenuopciones label::after {
+        content: "\276F";
+        text-align: center;
+        transition: all 0.35s;
+        display: inline-table;
+        position: absolute;
+        transform: rotate(90deg);
+        right: 0;
+    }
+}
+
+
+.hr-footer {
+    color: #d0d0d0;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    margin: auto;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+.footersubmenuopciones ul li a {
+    color: rgba(0, 0, 0, 0.58);
+    text-decoration: none;
+    margin-bottom: 24px;
+    display: block;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+}
+
+/* Container for 'reclamaciones' */
+.reclamaciones {
+    margin-bottom: 20px; /* Espacio debajo del enlace */
+}
+
+.reclamaciones img {
+    max-width: 150px; /* Asegura que la imagen no se desborde */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Lista de iconos */
+.wrapper {
+    display: flex;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 20px; /* Espacio entre iconos */
+    list-style: none;
+    padding: 0;
+}
+
+.icon {
+    position: relative; /* Para poder posicionar el tooltip */
+}
+
+.icon img {
+    width: 50px; /* Tamaño del icono */
+    height: 50px;
+    border-radius: 50%; /* Redondea los bordes */
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+.tooltip {
+    display: none; /* Oculta el tooltip por defecto */
+    position: absolute;
+    bottom: 60px; /* Posición del tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.icon:hover .tooltip {
+    display: block; /* Muestra el tooltip al pasar el ratón */
+}
+
+.lineafooter {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+
+
+/* Estilos para la imagen de café */
+
+.imagen-cafe {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    margin-top: 20px; /* Espacio superior */
+}
+
+@media only screen and (max-width: 480px) {
+    .imagen-cafe {
+        max-height: 300px;
+        max-width: 300px;
+    }
+}   
+
+
+
+/** About Us **/
+.about-us{width: 100%;
+    }
+.about-us .info{
+    width: 100%;
+    margin-top: 100px;
+}
+.about-us .info h2{
+    
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    
+}
+
+.about-us .info h3{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+.about-us .info p {
+   width: 80%;
+   margin:50px auto;
+   text-align: center;
+   color:#000;
+   font-size: 19px;
+   line-height: 40px;
+}
+.about-us .info hr{
+    width: 90%;
+    border:none;
+    height: 2px;
+    background: #4d4d4d;
+    margin:auto;
+}
+
+
+
+/* Estilos para la sección de la galería */
+.gallery-section {
+    width: 100%;
+}
+
+/* Estilos para el contenedor del ícono de animal */
+.animal-icon {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Estilos para el contenedor principal de la galería */
+.gallery-content {
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Distribución de columnas */
+    grid-template-rows: repeat(3, 230px); /* Distribución de filas */
+    grid-gap: 10px; /* Espaciado entre las imágenes */
+}
+
+/* Hover: sombra y zoom suavizado */
+.img-card img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  width: 100%;
+    height: 100%;
+}
+
+.img-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Overlay semi-transparente con lupa */
+.img-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.img-card::before {
+  content: "\1F50D"; /* Unicode lupa 🔍 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255,255,255,0.8);
+  font-size: 3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+.img-card:hover::before {
+  opacity: 1;
+}
+
+/* Modificar modal para animaciones fade */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 999999;
+  cursor: pointer;
+
+  /* Añadimos transición de opacidad */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.modal.active {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Imagen dentro del modal: efecto de escala suave */
+.modal #imgModal {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+  margin: 50px auto;
+  display: block;
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+}
+
+.modal.active #imgModal {
+  transform: scale(1);
+}
+
+/* Caption animado */
+#caption {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+  pointer-events: none;
+}
+
+.modal.active #caption {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+/* Botón cerrar: animación hover */
+#closeModal {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  color: #fff;
+  font-size: 30px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  z-index: 1000000;
+  cursor: pointer;
+}
+
+#closeModal:hover {
+  color: #a1e887;
+  transform: scale(1.2);
+}
+
+
+
+
+
+.contenido-seccion-2 {
+    background-color: #d6d5d5; /* Color crema humo */
+    padding: 85px;
+}
+
+.texto-crema-humo {
+    text-align: center;
+    max-width: 1000px; /* Define el ancho máximo del contenedor del texto */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.texto-crema-humo .titulo {
+    font-weight: bold; /* Negrita */
+    font-size: 24px; /* Tamaño de fuente más grande */
+    color: #046f26; /* Color nerde */
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.mi-seccion-unica {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    background-color: #fffbfb; /* Color de fondo claro */
+}
+
+.mi-tabla {
+    display: table;
+    width: auto; /* Cambiamos el ancho a automático */
+    margin: 0 auto; /* Centramos horizontalmente */
+}
+
+.mi-columna {
+    display: flex;
+    vertical-align: middle;
+    padding: 20px; 
+    flex-direction: column;
+}
+
+.mi-columna img {
+    width: 500px; /* Establecemos un ancho fijo */
+    height: 550px; /* Establecemos un alto fijo */
+}
+
+@media only screen and (max-width: 480px) {
+    .mi-columna img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+}   
+
+.mi-columna h2 {
+    font-size: 40px; /* Tamaño de fuente para h2 */
+    font-family: 'Open Sans', sans-serif; /* Tipo de fuente para h2 */
+    margin-bottom: 10px;
+}
+
+.mi-columna p {
+    font-size: 20px; /* Tamaño de fuente para p */
+    font-family: Arial, sans-serif; /* Tipo de fuente para p */
+    line-height: 1.5;
+}
+
+
+.nueva-seccion-unica {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    background-color: #0C3618; /* Color de fondo claro */
+}
+
+.nueva-seccion-unica .mi-tabla {
+    display: table;
+    width: auto; /* Cambiamos el ancho a automático */
+    margin: 0 auto; /* Centramos horizontalmente */
+}
+
+.nueva-seccion-unica .mi-columna h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color:#f0f0f0;
+}
+
+.nueva-seccion-unica .mi-columna h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color:#f0f0f0;
+}
+
+.nueva-seccion-unica .mi-columna p {
+    font-size: 20px;
+    line-height: 1.5;
+    color:#f0f0f0;
+}
+
+.user-info {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #333;
+    z-index: 10;
+}
+
+.menu-horizontal .hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991.98px) { 
+
+    .navbar-nav{
+        gap: 0px;
+    }
+
+    .navbar-brand{
+        margin-right: 0px;
+        padding-left: 0px;
+    }
+
+}
+
+
+.feature-section {
+  padding: 60px 0;
+  background: #fcf3f3;
+}
+
+.feature-section.dark {
+  background: #0C3618;
+}
+
+.feature-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(34, 34, 34, 0.10);
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.feature-section.dark .feature-content {
+  background: #153824;
+}
+
+.feature-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(20, 60, 37, 0.17);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.feature-image img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(87, 187, 128, 0.20);
+}
+
+.feature-text {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.feature-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #176A39;
+  margin-bottom: 16px;
+}
+
+.feature-section.dark .feature-text h2,
+.feature-section.dark .feature-text h3,
+.feature-section.dark .feature-text p {
+  color: #f5ffe7;
+}
+
+.feature-text h3 {
+  font-size: 1.6rem;
+  color: #55cf93;
+  margin-bottom: 12px;
+}
+
+.feature-text p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+@media (max-width: 900px) {
+  .feature-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+  .feature-image img {
+    max-width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-text h2 {
+    font-size: 1.5rem;
+  }
+  .feature-image img {
+    max-width: 95vw;
+  }
+}
+
+.feature-info-section {
+  padding: 60px 0;
+  background: #f3ede5;
+}
+
+.feature-info-content {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 24px;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 24px rgba(109, 114, 112, 0.11);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  transition: box-shadow 0.3s;
+}
+
+.feature-info-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #e6f7ec;
+  box-shadow: 0 2px 10px rgba(25, 105, 67, 0.09);
+  display: block;
+}
+
+.feature-info-content h2 {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #176A39;
+  margin-bottom: 18px;
+}
+
+.feature-info-content p {
+  font-size: 1.2rem;
+  color: #313131;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  .feature-info-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 24px 8px;
+  }
+  .feature-info-icon img {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+  }
+  .feature-info-content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+.lifestyle-section {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.lifestyle-content {
+  max-width: 100%;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 2px 20px rgba(100, 120, 80, 0.08);
+  padding: 40px 24px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+}
+
+.lifestyle-title-group h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: #176A39;
+  letter-spacing: 0.04em;
+  font-style: italic; /* reemplaza el <i> */
+  text-align: center;
+  margin: 0 0 8px 0;
+}
+
+.lifestyle-content p {
+  font-size: 1.18rem;
+  color: #333;
+  text-align: center;
+  line-height: 1.7;
+  max-width: 740px;
+  margin: 0 auto 8px auto;
+}
+
+.lifestyle-image-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.lifestyle-image {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(27,100,53,0.06);
+  margin-top: 4px;
+}
+
+.lifestyle-divider {
+  width: 80%;
+  border: none;
+  border-top: 2.5px solid #c4c4c4;
+  margin: 32px auto 0 auto;
+  opacity: .5;
+}
+
+@media (max-width: 700px) {
+  .lifestyle-content {
+    padding: 18px 8px;
+    gap: 16px;
+  }
+  .lifestyle-title-group h2 {
+    font-size: 1.4rem;
+  }
+  .lifestyle-image {
+    max-width: 95vw;
+  }
+}

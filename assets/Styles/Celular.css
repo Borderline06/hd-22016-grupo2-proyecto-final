@@ -1,0 +1,21 @@
+/* Para pantallas de hasta 480px */
+@media (max-width: 425px) {
+    .content {
+        padding: 10px;
+    }
+
+    .menu-container {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .menu-horizontal li a {
+        padding: 5px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+

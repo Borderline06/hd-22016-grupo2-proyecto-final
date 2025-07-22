@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificación | Café Inspirado en Starbucks®</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>¡Sólo un paso más!</h2>
+    <h1>Tu Café Inspirado en Starbucks®</h1>
+    <img src="img/image-verify.png" alt="Ilustración relacionada con café" class="illustration" style="border-radius: 15%;">
+    <p>Hemos enviado un código a tu correo para confirmar tu cuenta. Por favor, ingresa el código aquí para continuar.</p>
+    <form id="verifyForm">
+      <input type="email" id="correo" placeholder="Correo electrónico" required>
+      <div class="code-inputs">
+        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" aria-label="Dígito 1 del código de verificación" />
+        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" aria-label="Dígito 2 del código de verificación" />
+        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" aria-label="Dígito 3 del código de verificación" />
+        <input type="text" maxlength="1" inputmode="numeric" pattern="[0-9]*" aria-label="Dígito 4 del código de verificación" />
+      </div>
+      <button type="submit">Verificar código</button>
+    </form>
+    <p>¿No recibiste el código? <a href="#">Reenviar código</a></p>
+  </div>
+  <script src="js/verify.js"></script>
+</body>
+</html>
