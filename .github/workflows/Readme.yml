@@ -1,0 +1,32 @@
+name: Actualizar resumen de cambios
+
+on: [push]
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Reemplazar o agregar resumen de cambios en README
+        run: |
+          fecha="## Última actualización: $(date)"
+          if grep -q "## Última actualización:" README.md; then
+            # Reemplaza la línea existente
+            sed -i "s/## Última actualización:.*/$fecha/" README.md
+          else
+            # Agrega la línea si no existe
+            echo "$fecha" >> README.md
+          fi
+
+      - name: Commit y push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Actualizar resumen de cambios" || echo "Sin cambios que guardar"
+          git push
+  

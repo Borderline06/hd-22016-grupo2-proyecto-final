@@ -1,0 +1,27 @@
+name: Verificar despliegue en GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Esperar despliegue de GitHub Pages
+        run: |
+          echo "Esperando 90 segundos para que GitHub Pages despliegue..."
+          sleep 90
+
+      - name: Verificar acceso a la página
+        run: |
+          mkdir -p reports
+          curl -Is https://borderline06.github.io/hd-22016-grupo2-proyecto-final/ | head -n 10 > reports/deploy-status.txt
+          cat reports/deploy-status.txt
+
+      - name: Subir estado del despliegue
+        uses: actions/upload-artifact@v4
+        with:
+          name: estado-despliegue
+          path: reports/deploy-status.txt

@@ -1,0 +1,21 @@
+name: Verificar tamaño total
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  check-size:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Calcular tamaño total del proyecto
+        run: |
+          mkdir -p reports
+          total_size=$(du -sh . | cut -f1)
+          echo "Tamaño total del proyecto: $total_size" | tee reports/tamanio-total.txt
+
+      - name: Subir resultado como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: tamanio-total
+          path: reports/tamanio-total.txt
