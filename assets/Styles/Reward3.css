@@ -1,0 +1,140 @@
+/* Estilos generales del contenedor */
+.contenedor-reward {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilos para el título */
+.titulo-reward {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el subtítulo */
+.subtitulo-reward {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.banner-img .star-image-responsive {
+    width: 100%;
+}
+
+.star-image-responsive {
+    display: none;
+}
+
+/* Estilos para las columnas */
+.columnas-reward {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 420px) {
+    .columnas-reward {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 960px    ) {
+    .columnas-reward {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para cada columna */
+.columna-reward {
+    flex: 1; /* Distribuye las columnas por igual */
+    background-color: #fff; /* Fondo de las columnas */
+    padding: 20px;
+    text-align: center; /* Centrar contenido horizontalmente */
+    display: flex;
+    flex-direction: column; /* Alinear contenido verticalmente */
+}
+
+/* Estilos para el título de cada columna */
+.titulo-columna-reward {
+    font-size: 26px;
+    color: green; /* Color verde para el título */
+    display: inline-block; /* Convertir en bloque en línea para ajustar el borde */
+    line-height: 1; /* Ajustar la altura de línea para alinear correctamente el borde circular */
+    padding: 10px; /* Espaciado dentro del borde */
+    border: 2px solid green; /* Borde circular de color verde */
+    border-radius: 50%; /* Borde circular */
+    width: 40px; /* Ancho fijo para asegurar el borde circular */
+    height: 40px; /* Altura fija para asegurar el borde circular */
+    text-align: center; /* Centrar contenido horizontalmente */
+    margin: 0 auto; /* Centrar el título dentro de la columna */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+/* Estilos para el subtítulo de cada columna */
+.subtitulo-columna-reward {
+    font-size: 22px; /* Tamaño del subtítulo */
+    color: #000; /* Color negro para el subtítulo */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Estilos para la descripción de cada columna */
+.descripcion-columna-reward {
+    font-size: 16px; /* Tamaño de la descripción */
+    color: #777; /* Color más suave para la descripción */
+    font-weight: normal; /* Sin negrita para la descripción */
+}
+
+
+
+/* Estilos para el contenedor segundo */
+.contenedor-segundo-estrellas {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0; /* Color de fondo */
+    margin-top: 20px; /* Espacio arriba */
+}
+
+/* Estilos para el título */
+.titulo-segundo-estrellas {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la descripción */
+.descripcion-segundo-estrellas {
+    font-size: 14px; /* Tamaño de letra más pequeño */
+    color: #888; /* Color más claro */
+    text-align: center;
+    margin-top: 10px; /* Espacio arriba */
+}
+
+/* Estilos para la tabla */
+.tabla-segundo-estrellas {
+    width: 100%; /* Ancho máximo del contenedor */
+    max-width: 800px; /* Ancho máximo deseado para la tabla */
+    margin: 0 auto; /* Centrar la tabla horizontalmente */
+    border-collapse: collapse;
+}
+
+/* Estilos para las filas */
+.fila-contenido-estrellas {
+    display: table-row;
+}
+
+/* Estilos para las celdas de contenido */
+.celda-contenido-estrellas {
+    display: table-cell;
+    padding: 10px;
+    background-color: #fff; /* Color de fondo para contenido */
+    border: 1px solid #ccc; /* Borde */
+    text-align:center;
+}
