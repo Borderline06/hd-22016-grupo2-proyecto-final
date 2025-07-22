@@ -1,0 +1,23 @@
+name: Verificar archivo index.html
+
+on: [push, pull_request]
+
+jobs:
+  check-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Verificar si index.html existe
+        run: |
+          mkdir -p reports
+          if [ -f index.html ]; then
+            echo "[CORRECTO] index.html está presente" > reports/index-check.txt
+          else
+            echo "[INCORRECTO] index.html NO está presente" > reports/index-check.txt
+          fi
+          cat reports/index-check.txt
+      - name: Subir resultado
+        uses: actions/upload-artifact@v4
+        with:
+          name: verificacion-index
+          path: reports/index-check.txt

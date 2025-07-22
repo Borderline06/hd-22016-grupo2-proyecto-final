@@ -1,0 +1,30 @@
+name: Validar HTML
+
+on: [push, pull_request]
+
+jobs:
+  htmlhint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalar HTMLHint
+        run: npm install htmlhint -g
+
+      - name: Ejecutar HTMLHint y guardar salida
+        run: |
+          mkdir -p reports
+          if ls *.html 1> /dev/null 2>&1; then
+            htmlhint *.html > reports/htmlhint-report.txt || true
+          else
+            echo "No se encontraron archivos HTML en la raíz del repositorio." > reports/htmlhint-report.txt
+          fi
+
+      - name: Mostrar reporte en consola
+        run: cat reports/htmlhint-report.txt
+
+      - name: Subir artefacto del reporte
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-validacion-html
+          path: reports/htmlhint-report.txt

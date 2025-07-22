@@ -1,0 +1,27 @@
+name: Favicon presente
+
+on: [push, pull_request]
+
+jobs:
+  favicon-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Verificar favicon en archivos HTML
+        run: |
+          mkdir -p reports
+          report="reports/favicon.txt"
+          echo "Revisión de favicons:" > "$report"
+          for file in *.html; do
+            if grep -q 'rel="icon"' "$file"; then
+              echo "$file: favicon presente" >> "$report"
+            else
+              echo "$file: favicon NO presente" >> "$report"
+            fi
+          done
+          cat "$report"
+      - name: Subir reporte de favicon
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-favicon
+          path: reports/favicon.txt
