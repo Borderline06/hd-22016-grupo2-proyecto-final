@@ -1,1 +1,1 @@
-# hd-22016-grupo2-proyecto-final
+Implementación de CI/CD a través de GitHub Actions para el desarrollo de un sitio web "Starbucks"
