@@ -1,0 +1,136 @@
+.header {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .content {
+        margin-left: 24px;
+        margin-right: 24px;
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .content {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        justify-content: center;
+        max-width: var(--siteMaxWidthGlobal);
+        margin-left: 36px;
+        margin-right: 36px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .content {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        justify-content: center;
+        max-width: var(--siteMaxWidthGlobal);
+        margin-left: 36px;
+        margin-right: 36px;
+        position: relative;
+    }
+}
+
+.sprite.logo-main {
+    content: url(../img/favicon.jpg);
+    width: 69.24px;
+    height: 69.24px;
+    background-color: var(--colorWhite);
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+    .logo-responsive {
+        display: block;
+        margin-right: auto;
+    }
+}
+
+.navigation {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: center;
+    max-width: var(--siteMaxWidthGlobal);
+    margin-left: var(--marginContainerGlobal);
+    margin-right: var(--marginContainerGlobal);
+    position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+    .navigation {
+        margin-left: 24px;
+        margin-right: 24px;
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navigation {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        justify-content: center;
+        max-width: var(--siteMaxWidthGlobal);
+        margin-left: 36px;
+        margin-right: 36px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .navigation {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        justify-content: center;
+        max-width: var(--siteMaxWidthGlobal);
+        margin-left: 36px;
+        margin-right: 36px;
+        position: relative;
+    }
+}
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .hamburger, .toggle-menu {
+        display: block;
+    }
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    right: 0;
+    opacity: 0;
+}
