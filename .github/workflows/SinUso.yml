@@ -1,0 +1,38 @@
+name: Archivos sin uso
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  unused-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Detectar archivos .js y .css sin uso y guardar reporte
+        run: |
+          mkdir -p reports
+          report="reports/sin-uso.txt"
+          echo "Reporte de archivos sin uso detectados:" > "$report"
+
+          found_unused=false
+
+          for file in $(find assets -type f \( -name "*.css" -o -name "*.js" \)); do
+            basename=$(basename "$file")
+            if ! grep -r "$basename" ./*.html layout/ >/dev/null; then
+              echo "Archivo sin uso aparente: $file" | tee -a "$report"
+              found_unused=true
+            fi
+          done
+
+          if [ "$found_unused" = false ]; then
+            echo "No se detectaron archivos sin uso." | tee -a "$report"
+          fi
+
+          cat "$report"
+
+      - name: Subir reporte de archivos sin uso
+        uses: actions/upload-artifact@v4
+        with:
+          name: archivos-sinuso-reporte
+          path: reports/sin-uso.txt

@@ -1,0 +1,32 @@
+name: Pesos de archivos
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  size-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Verificar pesos y generar reporte
+        run: |
+          mkdir -p reports
+          {
+            echo "Peso de archivos JavaScript en assets/JavaScript:"
+            du -h assets/JavaScript/* 2>/dev/null || echo "No hay archivos JavaScript"
+            echo ""
+            echo "Peso de archivos CSS en assets/Styles:"
+            du -h assets/Styles/* 2>/dev/null || echo "No hay archivos CSS"
+            echo ""
+            echo "Reporte generado el: $(date)"
+          } > reports/size-report.txt
+
+          # Imprimir el reporte
+          cat reports/size-report.txt
+
+      - name: Subir peso del reporte
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-pesos
+          path: reports/size-report.txt

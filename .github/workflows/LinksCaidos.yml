@@ -1,0 +1,13 @@
+name: Revisar enlaces rotos
+
+on: [push, pull_request]
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install link checker
+        run: npm install -g broken-link-checker
+      - name: Run link checker
+        run: blc https://borderline06.github.io/hd-22016-grupo2-proyecto-final/ --filter-level 3 --recursive
