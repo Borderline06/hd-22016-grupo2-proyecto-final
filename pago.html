@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pago - El Rincón del Aroma</title>
+<link rel="stylesheet" href="/frontend/css/pago.css" />
+</head>
+<body>
+
+<div class="pago-contenedor" role="main" aria-label="Información de pago">
+  <header class="pago-header">
+    <img src="img/favicon.jpg" alt="Starbucks Logo" class="logo-starbucks" />
+    <h1 class="titulo">Completa tu información de pago</h1>
+  </header>
+
+  <form id="form-pago" novalidate>
+    <div>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+      <div class="error" id="error-nombre"></div>
+    </div>
+
+    <div>
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" autocomplete="email" required />
+      <div class="error" id="error-correo"></div>
+    </div>
+
+    <div>
+      <label for="tarjeta">Número de tarjeta</label>
+      <input type="text" id="tarjeta" name="tarjeta" maxlength="19" placeholder="1234 5678 9012 3456" inputmode="numeric" autocomplete="cc-number" required />
+      <div class="error" id="error-tarjeta"></div>
+    </div>
+
+    <div>
+      <label for="expiracion">Fecha de expiración</label>
+      <input type="month" id="expiracion" name="expiracion" min="2023-07" required />
+      <div class="error" id="error-expiracion"></div>
+    </div>
+
+    <div>
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" name="cvv" maxlength="4" inputmode="numeric" required />
+      <div class="error" id="error-cvv"></div>
+    </div>
+
+    <div class="botones-accion">
+  <button type="button" id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+  <button type="submit" id="btn-pagar" disabled>Pagar ahora</button>
+</div>
+
+
+  </form>
+
+  <p class="mensaje-exito" id="mensaje-exito" aria-live="polite"></p>
+</div>
+
+<script src="/frontend/js/pago.js" defer></script>
+</body>
+</html>
