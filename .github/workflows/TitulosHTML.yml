@@ -1,0 +1,27 @@
+name: Títulos HTML presentes
+
+on: [push, pull_request]
+
+jobs:
+  check-titles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Buscar títulos en HTML
+        run: |
+          mkdir -p reports
+          report="reports/titulos.html.txt"
+          echo "Revisión de títulos HTML:" > "$report"
+          for file in *.html; do
+            if ! grep -q "<title>" "$file"; then
+              echo "$file: falta título" >> "$report"
+            else
+              echo "$file: tiene título" >> "$report"
+            fi
+          done
+          cat "$report"
+      - name: Subir reporte de títulos
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-titulos
+          path: reports/titulos.html.txt

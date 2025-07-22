@@ -1,0 +1,25 @@
+name: Verificar semántica HTML
+
+on: [push, pull_request]
+
+jobs:
+  semantic-tags:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Revisión de etiquetas semánticas
+        run: |
+          mkdir -p reports
+          report="reports/semantica.txt"
+          echo "Verificación de etiquetas semánticas:" > "$report"
+          for file in *.html; do
+            echo "Archivo: $file" >> "$report"
+            grep -Eo '<(main|div|section|article|footer|header)' "$file" | sort | uniq -c >> "$report" || echo "Sin etiquetas semánticas" >> "$report"
+            echo "" >> "$report"
+          done
+          cat "$report"
+      - name: Subir reporte de semántica
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-semantica
+          path: reports/semantica.txt
